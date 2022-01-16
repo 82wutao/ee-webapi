@@ -6,7 +6,7 @@ func getRoute() *gin.Engine {
 	route := gin.Default()
 
 	route.GET("/order/query", orderQuery)
-	route.POST("/order/submmit", orderSubmmit)
+	route.POST("/order/submit", orderSubmmit)
 	route.DELETE("/order/cancel", orderCancel)
 	return route
 }

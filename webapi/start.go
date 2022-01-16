@@ -9,7 +9,7 @@ import (
 
 var httpServ *http.Server
 
-func Launch(addr string, port int16) {
+func startHttp(addr string, port int16) {
 	route := getRoute()
 
 	if httpServ == nil {
@@ -22,6 +22,14 @@ func Launch(addr string, port int16) {
 	if err := httpServ.ListenAndServe(); err != nil {
 		log.Fatalf("listen error:%+v\n", err)
 	}
+}
+func startRedis() {
+	cfg := getRedisConfig()
+	connect2redisServer(cfg, context.Background())
+}
+func Launch(addr string, port int16) {
+	startRedis()
+	startHttp(addr, port)
 }
 func Stop() {
 	if httpServ == nil {
