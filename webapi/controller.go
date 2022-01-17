@@ -3,17 +3,44 @@ package webapi
 import (
 	"fmt"
 	"log"
+	"strconv"
 	"time"
 
+	"github.com/82wutao/ee-rpcdeclare/order"
 	"github.com/gin-gonic/gin"
 	"github.com/shopspring/decimal"
 )
 
 func orderQuery(c *gin.Context) {
-	c.JSON(200, "orderQuery")
+
+	userID := c.Query("userid")
+	id, err := strconv.Atoi(userID)
+	if err != nil {
+		log.Printf("gin request query error %+v\n", err)
+		c.JSON(200, gin.H{
+			"code":   400,
+			"msg":    "param error",
+			"result": err.Error(),
+		})
+		return
+	}
+
+	req := &order.OrderQueryReq{UserID: id}
+	resp, err := order.OrderQuery(c.Request.Context(), req)
+	if err != nil {
+		log.Printf("order rpc error %+v\n", err)
+		c.JSON(200, gin.H{
+			"code":   500,
+			"msg":    "inner error",
+			"result": err.Error(),
+		})
+		return
+	}
+	c.JSON(200, resp)
 }
 
 type OrderSubmit struct {
+	UserID    int
 	TradePair int
 	Side      int
 	Price     decimal.Decimal
@@ -61,8 +88,42 @@ func orderSubmmit(c *gin.Context) {
 		return
 	}
 
-	c.JSON(200, "orderSubmmit")
+	req := &order.OrderSubmitReq{UserID: submit.UserID, OrderParam: nil}
+	resp, err := order.OrderSubmit(c.Request.Context(), req)
+	if err != nil {
+		log.Printf("order rpc error %+v\n", err)
+		c.JSON(200, gin.H{
+			"code":   500,
+			"msg":    "inner error",
+			"result": err.Error(),
+		})
+		return
+	}
+	c.JSON(200, resp)
 }
 func orderCancel(c *gin.Context) {
-	c.JSON(200, "orderCancel")
+	userID := c.Query("userid")
+	id, err := strconv.Atoi(userID)
+	if err != nil {
+		log.Printf("gin request query error %+v\n", err)
+		c.JSON(200, gin.H{
+			"code":   400,
+			"msg":    "param error",
+			"result": err.Error(),
+		})
+		return
+	}
+
+	req := &order.OrderCancelReq{UserID: id}
+	resp, err := order.OrderCancel(c.Request.Context(), req)
+	if err != nil {
+		log.Printf("order rpc error %+v\n", err)
+		c.JSON(200, gin.H{
+			"code":   500,
+			"msg":    "inner error",
+			"result": err.Error(),
+		})
+		return
+	}
+	c.JSON(200, resp)
 }
