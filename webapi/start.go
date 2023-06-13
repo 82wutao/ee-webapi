@@ -28,7 +28,7 @@ func startRedis() {
 	connect2redisServer(cfg, context.Background())
 }
 func Launch(addr string, port int16) {
-	startRedis()
+	// startRedis()
 	startHttp(addr, port)
 }
 func Stop() {

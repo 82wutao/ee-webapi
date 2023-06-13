@@ -5,7 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/82wutao/ee-webapi/webapi"
+	"github.com/82wutao/ee-webapi/web"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -20,5 +21,11 @@ func main() {
 		log.Fatalf("get port argument error %+v\n", err)
 		return
 	}
-	webapi.Launch(addr, int16(port))
+
+	route := web.GinMakeRoute()
+	route.GET("/order", func(ctx *gin.Context) {
+		ctx.JSON(200, os.Args)
+	})
+	web.Launch(addr, int16(port), route)
+	// webapi.Launch(addr, int16(port))
 }
