@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -22,9 +23,17 @@ func main() {
 		return
 	}
 
-	route := web.GinMakeRoute()
+	route := web.GinMakeRoute("html/*")
 	route.GET("/order", func(ctx *gin.Context) {
 		ctx.JSON(200, os.Args)
+	})
+	route.GET("/html", func(c *gin.Context) {
+		fmt.Printf(c.Request.URL.RawPath)
+		c.HTML(200, "index.html", nil)
+	})
+	route.GET("/", func(c *gin.Context) {
+		fmt.Printf(c.Request.URL.RawPath)
+		c.HTML(200, "index.html", nil)
 	})
 	web.Launch(addr, int16(port), route)
 	// webapi.Launch(addr, int16(port))
