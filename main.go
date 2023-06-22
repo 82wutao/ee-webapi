@@ -27,9 +27,13 @@ func main() {
 	route.GET("/order", func(ctx *gin.Context) {
 		ctx.JSON(200, os.Args)
 	})
-	route.GET("/html", func(c *gin.Context) {
+	route.GET("/records", func(c *gin.Context) {
 		fmt.Printf(c.Request.URL.RawPath)
 		c.HTML(200, "index.html", nil)
+	})
+	route.GET("/login", func(c *gin.Context) {
+		fmt.Printf(c.Request.URL.RawPath)
+		c.HTML(200, "login.html", nil)
 	})
 	route.GET("/", func(c *gin.Context) {
 		fmt.Printf(c.Request.URL.RawPath)
