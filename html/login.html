@@ -1,206 +1,199 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Login Your Account</title>
-    <!-- <script defer data-api="/stats/api/event" data-domain="preview.tabler.io" src="/stats/js/script.js"></script> -->
-    <meta name="msapplication-TileColor" content=""/>
-    <meta name="theme-color" content=""/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="mobile-web-app-capable" content="yes"/>
-    <meta name="HandheldFriendly" content="True"/>
-    <meta name="MobileOptimized" content="320"/>
-    <link rel="icon" href="/image/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon"/>
-    <meta name="description" content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!"/>
-    <meta name="canonical" content="https://preview.tabler.io/">
-    <meta name="twitter:image:src" content="https://preview.tabler.io/static/og.png">
-    <meta name="twitter:site" content="@tabler_ui">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Tabler: Premium and Open Source dashboard template with responsive and high quality UI.">
-    <meta name="twitter:description" content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!">
-    <meta property="og:image" content="https://preview.tabler.io/static/og.png">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="640">
-    <meta property="og:site_name" content="Tabler">
-    <meta property="og:type" content="object">
-    <meta property="og:title" content="Tabler: Premium and Open Source dashboard template with responsive and high quality UI.">
-    <meta property="og:url" content="https://preview.tabler.io/static/og.png">
-    <meta property="og:description" content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!">
-    <!-- CSS files -->
-    <link href="/css/tabler.min.css?1685973381" rel="stylesheet"/>
-    <link href="/css/tabler-flags.min.css?1685973381" rel="stylesheet"/>
-    <link href="/css/tabler-payments.min.css?1685973381" rel="stylesheet"/>
-    <link href="/css/tabler-vendors.min.css?1685973381" rel="stylesheet"/>
-    <link href="/css/demo.min.css?1685973381" rel="stylesheet"/>
-    <style>
-      @import url('https://rsms.me/inter/inter.css');
-      :root {
-      	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-      }
-      body {
-      	font-feature-settings: "cv03", "cv04", "cv11";
-      }
-    </style>
-  </head>
-  <body >
-    <script src="/js/demo-theme.min.js?1685973381"></script>
-    <div class="page">
-      <div class="page-wrapper">
-        <!-- Page body -->
-        <div class="page-body">
-          <div class="container-xl">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Your Account</title>
+  <!-- <script defer data-api="/stats/api/event" data-domain="preview.tabler.io" src="/stats/js/script.js"></script> -->
+  <meta name="msapplication-TileColor" content="">
+  <meta name="theme-color" content="">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <link rel="icon" href="/image/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+  <meta name="description"
+    content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!">
+  <meta name="canonical" content="https://preview.tabler.io/">
+  <meta name="twitter:image:src" content="https://preview.tabler.io/static/og.png">
+  <meta name="twitter:site" content="@tabler_ui">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title"
+    content="Tabler: Premium and Open Source dashboard template with responsive and high quality UI.">
+  <meta name="twitter:description"
+    content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!">
+  <meta property="og:image" content="https://preview.tabler.io/static/og.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:site_name" content="Tabler">
+  <meta property="og:type" content="object">
+  <meta property="og:title"
+    content="Tabler: Premium and Open Source dashboard template with responsive and high quality UI.">
+  <meta property="og:url" content="https://preview.tabler.io/static/og.png">
+  <meta property="og:description"
+    content="Tabler comes with tons of well-designed components and features. Start your adventure with Tabler and make your dashboard great again. For free!">
+  <!-- CSS files -->
+  <link href="/css/tabler.min.css?1685973381" rel="stylesheet">
+  <link href="/css/tabler-flags.min.css?1685973381" rel="stylesheet">
+  <link href="/css/tabler-payments.min.css?1685973381" rel="stylesheet">
+  <link href="/css/tabler-vendors.min.css?1685973381" rel="stylesheet">
+  <link href="/css/demo.min.css?1685973381" rel="stylesheet">
+  <style>
+    @import url('https://rsms.me/inter/inter.css');
 
+    :root {
+      --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+    }
 
+    body {
+      font-feature-settings: "cv03", "cv04", "cv11";
+    }
+  </style>
+</head>
 
-<!-- Section: Design Block -->
-<section class="">
-    <!-- Jumbotron -->
-    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
-      <div class="container">
-        <div class="row gx-lg-5 align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <h1 class="my-5 display-3 fw-bold ls-tight">
-              The best offer <br />
-              <span class="text-primary">for your business</span>
-            </h1>
-            <p style="color: hsl(217, 10%, 50.8%)">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-              quibusdam tempora at cupiditate quis eum maiores libero
-              veritatis? Dicta facilis sint aliquid ipsum atque?
-            </p>
-          </div>
-  
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="card">
-              <div class="card-body py-5 px-md-5">
-                <form>
-                  <!-- 2 column grid layout with text inputs for the first and last names -->
-                  <div class="row">
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example1" class="form-control" />
-                        <label class="form-label" for="form3Example1">First name</label>
+<body>
+  <script src="/js/demo-theme.min.js?1685973381"></script>
+  <div class="page">
+    <div class="page-wrapper">
+      <!-- Page body -->
+      <div class="page-body">
+        <div class="container-xl">
+          <!-- Section: Design Block -->
+          <section class="">
+            <!-- Jumbotron -->
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+              <div class="container">
+                <div class="row gx-lg-5 align-items-center">
+                  <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-3 fw-bold ls-tight">The best offer<br>
+                      <span class="text-primary">for your business</span>
+                    </h1>
+                    <p style="color: hsl(217, 10%, 50.8%)">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eveniet, itaque accusantium odio, soluta, corrupti aliquam quibusdam tempora at cupiditate quis
+                      eum maiores libero veritatis? Dicta facilis sint aliquid ipsum atque?</p>
+                  </div>
+                  <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                      <div class="card-body py-5 px-md-5">
+                        <form id="login-form">
+                          <!-- 2 column grid layout with text inputs for the first and last names -->
+                          <div class="row">
+                            <div class="col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="form3Example1" class="form-control" name="fstName">
+                                <label class="form-label" for="form3Example1">First name</label>
+                              </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                              <div class="form-outline">
+                                <input type="text" id="form3Example2" class="form-control" name="lstName">
+                                <label class="form-label" for="form3Example2">Last name</label>
+                              </div>
+                            </div>
+                          </div><!-- Email input -->
+                          <div class="form-outline mb-4">
+                            <input type="email" id="form3Example3" class="form-control" name="email">
+                            <label class="form-label" for="form3Example3">Email address</label>
+                          </div><!-- Password input -->
+                          <div class="form-outline mb-4">
+                            <input type="password" id="form3Example4" class="form-control" name="password">
+                            <label class="form-label" for="form3Example4">Password</label>
+                          </div><!-- Checkbox -->
+                          <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" name="subscribe" value=""
+                              id="form2Example33" checked>
+                            <label class="form-check-label" for="form2Example33">Subscribe to our newsletter</label>
+                          </div><!-- Submit button -->
+                          <button id="login-form-submit" type="button"
+                            class="btn btn-primary btn-block mb-4 form-control">Sign up</button>
+                          <!-- Register buttons -->
+                          <div class="text-center">
+                            <p>or sign up with:</p>
+                          </div>
+                        </form>
                       </div>
                     </div>
-                    <div class="col-md-6 mb-4">
-                      <div class="form-outline">
-                        <input type="text" id="form3Example2" class="form-control" />
-                        <label class="form-label" for="form3Example2">Last name</label>
-                      </div>
-                    </div>
                   </div>
-  
-                  <!-- Email input -->
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form3Example3" class="form-control" />
-                    <label class="form-label" for="form3Example3">Email address</label>
-                  </div>
-  
-                  <!-- Password input -->
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form3Example4" class="form-control" />
-                    <label class="form-label" for="form3Example4">Password</label>
-                  </div>
-  
-                  <!-- Checkbox -->
-                  <div class="form-check d-flex justify-content-center mb-4">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                    <label class="form-check-label" for="form2Example33">
-                      Subscribe to our newsletter
-                    </label>
-                  </div>
-  
-                  <!-- Submit button -->
-                  <button type="submit" class="btn btn-primary btn-block mb-4 form-control ">
-                    Sign up 
-                  </button>
-  
-                  <!-- Register buttons -->
-                  <div class="text-center">
-                    <p>or sign up with:</p>
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                      <i class="fab fa-facebook-f"></i>
-                    </button>
-  
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                      <i class="fab fa-google"></i>
-                    </button>
-  
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                      <i class="fab fa-twitter"></i>
-                    </button>
-  
-                    <button type="button" class="btn btn-link btn-floating mx-1">
-                      <i class="fab fa-github"></i>
-                    </button>
-                  </div>
-                </form>
+                </div>
               </div>
+            </div><!-- Jumbotron -->
+          </section><!-- Section: Design Block -->
+        </div>
+      </div>
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container-xl">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  <a href="https://tabler.io/docs" target="_blank" class="link-secondary"
+                    rel="noopener">Documentation</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="./license.html" class="link-secondary">License</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary"
+                    rel="noopener">Source code</a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="https://github.com/sponsors/codecalm" target="_blank" class="link-secondary"
+                    rel="noopener"><!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24"
+                      height="24" viewbox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path>
+                    </svg> Sponsor</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">Copyright © 2023 <a href="." class="link-secondary">Tabler</a>. All rights
+                  reserved.
+                </li>
+                <li class="list-inline-item">
+                  <a href="./changelog.html" class="link-secondary" rel="noopener">v1.0.0-beta19</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
-    <!-- Jumbotron -->
-  </section>
-  <!-- Section: Design Block -->
+  </div><!-- Libs JS -->
+  <script src="/libs/apexcharts/dist/apexcharts.min.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/js/jsvectormap.min.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/maps/world.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/maps/world-merc.js?1685973381" defer></script> <!-- Tabler Core -->
 
+  <script src="/js/tabler.min.js?1685973381" defer></script>
+  <script src="/js/demo.min.js?1685973381" defer></script>
+  <script src="/js/app.js"></script>
+  <script>
+    const form = getEleById('login-form');
+    const submit = getEleById('login-form-submit');
 
+    const callbacks = [
+      function (ajaxReq, status, response) { console.log('on 0'); },
+      function (ajaxReq, status, response) { console.log('on 1'); },
+      function (ajaxReq, status, response) { console.log('on 2'); },
+      function (ajaxReq, status, response) { console.log('on 3'); },
+      function (ajaxReq, status, response) {
+        console.log('on 4');
+        console.log(status);
+        console.log(response);
+        console.log(ajaxReq.responseText);
+        alert();
+      },
+    ];
+    LoginModel.load(form, submit, 'http://localhost:8090/api/login', callbacks, 'post', 'json');
+  </script>
+</body>
 
-
-
-          </div>
-        </div>
-        <footer class="footer footer-transparent d-print-none">
-          <div class="container-xl">
-            <div class="row text-center align-items-center flex-row-reverse">
-              <div class="col-lg-auto ms-lg-auto">
-                <ul class="list-inline list-inline-dots mb-0">
-                  <li class="list-inline-item"><a href="https://tabler.io/docs" target="_blank" class="link-secondary" rel="noopener">Documentation</a></li>
-                  <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
-                  <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank" class="link-secondary" rel="noopener">Source code</a></li>
-                  <li class="list-inline-item">
-                    <a href="https://github.com/sponsors/codecalm" target="_blank" class="link-secondary" rel="noopener">
-                      <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
-                      <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink icon-filled icon-inline" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
-                      Sponsor
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-12 col-lg-auto mt-3 mt-lg-0">
-                <ul class="list-inline list-inline-dots mb-0">
-                  <li class="list-inline-item">
-                    Copyright &copy; 2023
-                    <a href="." class="link-secondary">Tabler</a>.
-                    All rights reserved.
-                  </li>
-                  <li class="list-inline-item">
-                    <a href="./changelog.html" class="link-secondary" rel="noopener">
-                      v1.0.0-beta19
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
-    <!-- Libs JS -->
-    <script src="/libs/apexcharts/dist/apexcharts.min.js?1685973381" defer></script>
-    <script src="/libs/jsvectormap/dist/js/jsvectormap.min.js?1685973381" defer></script>
-    <script src="/libs/jsvectormap/dist/maps/world.js?1685973381" defer></script>
-    <script src="/libs/jsvectormap/dist/maps/world-merc.js?1685973381" defer></script>
-    <!-- Tabler Core -->
-    <script src="/js/tabler.min.js?1685973381" defer></script>
-    <script src="/js/demo.min.js?1685973381" defer></script>
-  </body>
 </html>

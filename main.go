@@ -7,6 +7,8 @@ import (
 	"strconv"
 
 	"github.com/82wutao/ee-webapi/web"
+	"github.com/82wutao/ee-webapi/web/auth"
+	"github.com/82wutao/ee-webapi/web/broker"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,6 +26,9 @@ func main() {
 	}
 
 	route := web.GinMakeRoute("html/*")
+	auth.LoadControllers(route)
+	broker.LoadControllers(route)
+
 	route.GET("/order", func(ctx *gin.Context) {
 		ctx.JSON(200, os.Args)
 	})
@@ -31,10 +36,7 @@ func main() {
 		fmt.Printf(c.Request.URL.RawPath)
 		c.HTML(200, "index.html", nil)
 	})
-	route.GET("/login", func(c *gin.Context) {
-		fmt.Printf(c.Request.URL.RawPath)
-		c.HTML(200, "login.html", nil)
-	})
+
 	route.GET("/", func(c *gin.Context) {
 		fmt.Printf(c.Request.URL.RawPath)
 		c.HTML(200, "index.html", nil)
